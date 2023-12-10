@@ -22,45 +22,12 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <170>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
-        };
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
     };
 
     keymap {
@@ -88,7 +55,7 @@
        &kp W               &kp L           &kp Y           &kp P             &kp B        &kp Z          &kp F              &kp O            &kp U            &kp SQT
        &mt LEFT_CONTROL A  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &kp G        &kp M          &mt RIGHT_SHIFT N  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &mt RIGHT_CONTROL A
 &none  &kp Q               &kp J           &kp V           &kp D             &kp K        &kp X          &kp H              &kp SEMICOLON    &kp DOT          &kp PERIOD           &none
-                                           &none           &lt NAV TAB       &kp SPACE    &kp BACKSPACE  &lt SYM ESC        &none
+                                           &none           &mo 2             &kp SPACE    &kp BACKSPACE  &mo 1              &none
             >;
         };
 
@@ -111,10 +78,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
+        &kp PIPE  &kp AT        &kp HASH   &kp DOLLAR      &kp PERCENT      &kp CARET  &kp AMPERSAND     &kp STAR           &kp TILDE  &kp BACKSPACE
+        &kp TAB   &kp QUESTION  &kp MINUS  &kp UNDERSCORE  &kp SLASH        &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESC    &kp ENTER
+&trans  &none     &none         &kp PLUS   &kp EXCL        &kp BACKSLASH    &kp LBRC   &kp LPAR          &kp RPAR           &kp RBRC   &kp DEL        &trans
+                                &trans     &trans          &trans           &none      &trans            &trans
             >;
         };
 
@@ -137,10 +104,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
+        &none  &kp PG_DN  &kp UP    &kp PG_UP  &none     &none   &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
+        &none  &kp LEFT   &kp DOWN  &kp RIGHT  &none     &none   &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
+&trans  &none  &none      &none     &none      &none     &none   &none        &none       &none          &none        &trans
+                          &trans    &trans     &trans    &trans  &trans       &trans
             >;
         };
 
@@ -220,6 +187,15 @@
 &trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        ThirdLayer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
