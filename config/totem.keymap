@@ -201,7 +201,7 @@
 
             bindings = <
         &kp K_PLAY_PAUSE      &kp K_PREVIOUS   &kp K_NEXT    &kp K_MUTE       &kp KP_NUMLOCK    &none            &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_MINUS
-        &kp KP_DIVIDE         &kp KP_ASTERISK  &kp COMMA     &kp DOT          &kp CAPS          &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS
+        &kp KP_DIVIDE         &kp KP_ASTERISK  &kp COMMA     &kp DOT          &caps_word        &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS
 &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC    &kp C_VOL_DN  &kp C_VOLUME_UP  &none             &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_EQUAL  &trans
                                                &trans        &trans           &trans            &trans           &trans           &trans
             >;
