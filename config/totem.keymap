@@ -21,12 +21,83 @@
 #define TVP1 4
 #define TVP2 5
 
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <120>;
+    quick-tap-ms = <200>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
     };
 
     macros {
+    };
+
+    behaviors {
+        sel_bt0: sel_bt0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEL_BT0";
+            bindings = <&none>, <&bt BT_SEL 0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        sel_bt1: sel_bt1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEL_BT1";
+            bindings = <&none>, <&bt BT_SEL 1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        sel_bt2: sel_bt2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEL_BT2";
+            bindings = <&none>, <&bt BT_SEL 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        dc_bt0: dc_bt0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DC_BT0";
+            bindings = <&none>, <&bt BT_DISC 0>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
+
+        dc_bt1: dc_bt1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DC_BT1";
+            bindings = <&none>, <&bt BT_DISC 1>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
+
+        dc_bt2: dc_bt2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DC_BT2";
+            bindings = <&none>, <&bt BT_DISC 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
+
+        cl_bt: cl_bt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CL_BT";
+            bindings = <&none>, <&bt BT_CLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -103,10 +174,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &bt BT_DISC 0  &kp PG_DN  &kp UP    &kp PG_UP  &bt BT_SEL 0    &none   &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
-        &bt BT_DISC 1  &kp LEFT   &kp DOWN  &kp RIGHT  &bt BT_SEL 1    &none   &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
-&trans  &bt BT_DISC 2  &none      &none     &none      &bt BT_SEL 2    &none   &none        &none       &none          &none        &trans
-                                  &trans    &trans     &trans          &trans  &trans       &trans
+        &dc_bt0  &kp PG_DN  &kp UP    &kp PG_UP  &sel_bt0    &none   &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
+        &dc_bt1  &kp LEFT   &kp DOWN  &kp RIGHT  &sel_bt1    &none   &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
+&trans  &dc_bt2  &cl_bt     &none     &none      &sel_bt2    &none   &none        &none       &none          &none        &trans
+                            &trans    &trans     &trans      &trans  &trans       &trans
             >;
         };
 
