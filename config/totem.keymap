@@ -125,7 +125,7 @@
             bindings = <
               &kp W               &kp L           &kp Y           &kp P             &kp B        &kp Z          &kp F              &kp O            &kp U            &kp SQT
               &mt LEFT_CONTROL C  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &kp G        &kp M          &mt RIGHT_SHIFT N  &mt RIGHT_ALT E  &mt RIGHT_GUI I  &mt RIGHT_CONTROL A
-&kp LEFT_WIN  &kp Q               &kp J           &kp V           &kp D             &kp K        &kp X          &kp H              &kp SEMICOLON    &kp DOT          &kp PERIOD           &kp LEFT_SHIFT
+&kp LEFT_WIN  &kp Q               &kp J           &kp V           &kp D             &kp K        &kp X          &kp H              &kp SEMICOLON    &kp COMMA        &kp PERIOD           &kp LEFT_SHIFT
                                                   &kp LCTRL       &mo 2             &kp SPACE    &kp BACKSPACE  &mo 1              &kp LALT
             >;
         };
