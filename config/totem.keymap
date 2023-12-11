@@ -177,7 +177,7 @@
             bindings = <
         &dc_bt0  &kp PG_DN  &kp UP    &kp PG_UP  &sel_bt0    &none   &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
         &dc_bt1  &kp LEFT   &kp DOWN  &kp RIGHT  &sel_bt1    &none   &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
-&trans  &dc_bt2  &cl_bt     &none     &none      &sel_bt2    &none   &none        &none       &none          &none        &trans
+&trans  &dc_bt2  &cl_bt     &none     &none      &sel_bt2    &none   &kp LCTRL    &none       &none          &none        &trans
                             &trans    &trans     &trans      &trans  &trans       &trans
             >;
         };
