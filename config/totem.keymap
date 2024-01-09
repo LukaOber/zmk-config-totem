@@ -99,6 +99,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT)>;
         };
+
+        sel_bt3: sel_bt3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEL_BT3";
+            bindings = <&none>, <&bt BT_SEL 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        dc_bt3: dc_bt3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DC_BT3";
+            bindings = <&none>, <&bt BT_DISC 2>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -175,10 +193,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &dc_bt0  &kp PG_DN  &kp UP    &kp PG_UP  &sel_bt0    &none   &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
-        &dc_bt1  &kp LEFT   &kp DOWN  &kp RIGHT  &sel_bt1    &none   &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
-&trans  &dc_bt2  &cl_bt     &none     &none      &sel_bt2    &none   &kp LCTRL    &none       &none          &none        &trans
-                            &trans    &trans     &trans      &trans  &trans       &trans
+        &dc_bt0  &kp PG_DN  &kp UP    &kp PG_UP  &sel_bt0    &to 4     &kp LC(TAB)  &kp K_BACK  &kp K_FORWARD  &kp LC(TAB)
+        &dc_bt1  &kp LEFT   &kp DOWN  &kp RIGHT  &sel_bt1    &sel_bt3  &kp LEFT     &kp DOWN    &kp UP         &kp RIGHT
+&trans  &dc_bt2  &cl_bt     &none     &none      &sel_bt2    &dc_bt3   &kp LCTRL    &none       &none          &none        &trans
+                            &trans    &trans     &trans      &trans    &trans       &trans
             >;
         };
 
@@ -205,6 +223,15 @@
         &kp KP_DIVIDE         &kp KP_ASTERISK  &kp COMMA     &kp DOT          &caps_word        &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS
 &trans  &kp C_BRIGHTNESS_DEC  &kp C_BRI_INC    &kp C_VOL_DN  &kp C_VOLUME_UP  &none             &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_N2        &kp KP_NUMBER_3  &kp KP_EQUAL  &trans
                                                &trans        &trans           &trans            &trans           &trans           &trans
+            >;
+        };
+
+        game_layer {
+            bindings = <
+           &kp TAB         &kp Y  &none  &kp E  &kp I    &trans  &trans  &trans  &trans  &trans
+           &kp R           &kp A  &kp W  &kp D  &kp T    &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LEFT_SHIFT  &none  &kp S  &none  &kp H    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &kp O  &kp B  &kp N    &trans  &trans  &trans
             >;
         };
 
