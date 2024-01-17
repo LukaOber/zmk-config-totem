@@ -23,16 +23,13 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <230>;
+    tapping-term-ms = <170>;
     quick-tap-ms = <0>;
-    require-prior-idle-ms = <150>;
+    require-prior-idle-ms = <120>;
 };
 
 / {
     combos { compatible = "zmk,combos"; };
-
-    macros {
-    };
 
     behaviors {
         sel_bt0: sel_bt0 {
