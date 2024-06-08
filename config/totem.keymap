@@ -139,6 +139,54 @@
             key-positions = <19 27>;
             layers = <0>;
         };
+
+        cr_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <17 29>;
+            layers = <0>;
+        };
+
+        cr_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <28 18>;
+            layers = <0>;
+        };
+
+        cr_question {
+            bindings = <&kp QUESTION>;
+            key-positions = <16 28>;
+            layers = <0>;
+        };
+
+        cr_semi {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <19 29>;
+            layers = <0>;
+        };
+
+        cr_apostrophe {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <30 18>;
+            layers = <0>;
+        };
+
+        cr_comma {
+            bindings = <&kp COMMA>;
+            key-positions = <27 17>;
+            layers = <0>;
+        };
+
+        cr_tab {
+            bindings = <&kp TAB>;
+            key-positions = <16 17 18>;
+            layers = <0>;
+        };
+
+        cr_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <27 28 29>;
+            layers = <0>;
+        };
     };
 
     behaviors {
@@ -264,16 +312,16 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none               &none           &none           &none             &none    &none  &none            &none  &none  &none
-       &mt LEFT_CONTROL C  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &none    &none  &kp I            &kp N  &kp S  &kp R
-&none  &kp Q               &kp J           &kp V           &kp D             &none    &none  &kp E            &kp T  &kp O  &kp A  &none
-                                           &none           &none             &none    &none  &kp RIGHT_SHIFT  &none
+       &none               &none           &none           &none             &none    &none          &none      &none  &none  &none
+       &mt LEFT_CONTROL C  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &none    &none          &kp I      &kp N  &kp S  &kp R
+&none  &kp Q               &kp J           &kp V           &kp D             &none    &none          &kp E      &kp T  &kp O  &kp A  &none
+                                           &none           &none             &none    &kp BACKSPACE  &kp SPACE  &none
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        symbol_layer {
+        inner_layer {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "SYM";
@@ -290,10 +338,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp PIPE  &kp AT        &kp HASH   &kp DOLLAR      &kp PERCENT      &kp CARET  &kp AMPERSAND     &kp STAR           &kp TILDE  &kp BACKSPACE
-        &kp TAB   &kp QUESTION  &kp MINUS  &kp UNDERSCORE  &kp SLASH        &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESC    &kp ENTER
-&trans  &none     &none         &kp PLUS   &kp EXCL        &kp BACKSLASH    &kp LBRC   &kp LPAR          &kp RPAR           &kp RBRC   &kp DEL        &trans
-                                &trans     &trans          &trans           &trans     &trans            &trans
+        &kp PIPE  &kp AT        &kp HASH   &kp DOLLAR      &kp PERCENT      &none   &none             &none              &none     &none
+        &kp TAB   &kp QUESTION  &kp MINUS  &kp UNDERSCORE  &kp SLASH        &none   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESC   &kp ENTER
+&trans  &none     &none         &kp PLUS   &kp EXCL        &kp BACKSLASH    &none   &kp LPAR          &kp RPAR           &kp RBRC  &kp DEL    &none
+                                &trans     &trans          &trans           &trans  &trans            &trans
             >;
         };
 
