@@ -36,7 +36,91 @@
             bindings = <&kp Y>;
             key-positions = <16 17>;
             layers = <0>;
-            timeout-ms = <50>;
+        };
+
+        cr_b {
+            bindings = <&kp B>;
+            key-positions = <18 19>;
+        };
+
+        cr_h {
+            bindings = <&kp H>;
+            key-positions = <27 28>;
+        };
+
+        cr_l {
+            bindings = <&kp L>;
+            key-positions = <29 30>;
+        };
+
+        cr_u {
+            bindings = <&kp U>;
+            key-positions = <28 29>;
+        };
+
+        cr_p {
+            bindings = <&kp P>;
+            key-positions = <17 18>;
+        };
+
+        cr_d {
+            bindings = <&kp D>;
+            key-positions = <27 30>;
+        };
+
+        cr_g {
+            bindings = <&kp G>;
+            key-positions = <16 19>;
+        };
+
+        cr_f {
+            bindings = <&kp F>;
+            key-positions = <16 18>;
+        };
+
+        cr_z {
+            bindings = <&kp Z>;
+            key-positions = <19 17>;
+        };
+
+        cr_c {
+            bindings = <&kp C>;
+            key-positions = <27 29>;
+        };
+
+        cr_q {
+            bindings = <&kp Q>;
+            key-positions = <30 28>;
+        };
+
+        cr_k {
+            bindings = <&kp K>;
+            key-positions = <16 29>;
+        };
+
+        cr_x {
+            bindings = <&kp X>;
+            key-positions = <19 28>;
+        };
+
+        cr_j {
+            bindings = <&kp J>;
+            key-positions = <30 17>;
+        };
+
+        cr_v {
+            bindings = <&kp V>;
+            key-positions = <18 27>;
+        };
+
+        cr_w {
+            bindings = <&kp W>;
+            key-positions = <16 30>;
+        };
+
+        cr_m {
+            bindings = <&kp M>;
+            key-positions = <19 27>;
         };
     };
 
