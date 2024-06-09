@@ -187,6 +187,136 @@
             key-positions = <27 28 29>;
             layers = <0>;
         };
+
+        cl_y {
+            bindings = <&kp Y>;
+            key-positions = <13 12>;
+        };
+
+        cl_b {
+            bindings = <&kp B>;
+            key-positions = <10 11>;
+        };
+
+        cl_h {
+            bindings = <&kp H>;
+            key-positions = <24 23>;
+        };
+
+        cl_l {
+            bindings = <&kp L>;
+            key-positions = <21 22>;
+        };
+
+        cl_u {
+            bindings = <&kp U>;
+            key-positions = <23 22>;
+        };
+
+        cl_p {
+            bindings = <&kp P>;
+            key-positions = <11 12>;
+        };
+
+        cl_d {
+            bindings = <&kp D>;
+            key-positions = <24 21>;
+        };
+
+        cl_g {
+            bindings = <&kp G>;
+            key-positions = <10 13>;
+        };
+
+        cl_f {
+            bindings = <&kp F>;
+            key-positions = <13 11>;
+        };
+
+        cl_z {
+            bindings = <&kp Z>;
+            key-positions = <10 12>;
+        };
+
+        cl_c {
+            bindings = <&kp C>;
+            key-positions = <24 22>;
+        };
+
+        cl_q {
+            bindings = <&kp Q>;
+            key-positions = <21 23>;
+        };
+
+        cl_k {
+            bindings = <&kp K>;
+            key-positions = <22 13>;
+        };
+
+        cl_x {
+            bindings = <&kp X>;
+            key-positions = <10 23>;
+        };
+
+        cl_j {
+            bindings = <&kp J>;
+            key-positions = <21 12>;
+        };
+
+        cl_v {
+            bindings = <&kp V>;
+            key-positions = <24 11>;
+        };
+
+        cl_w {
+            bindings = <&kp W>;
+            key-positions = <21 13>;
+        };
+
+        cl_m {
+            bindings = <&kp M>;
+            key-positions = <10 24>;
+        };
+
+        cl_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <22 12>;
+        };
+
+        cl_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <23 11>;
+        };
+
+        cl_question {
+            bindings = <&kp QUESTION>;
+            key-positions = <13 23>;
+        };
+
+        cl_semi {
+            bindings = <&kp SEMICOLON>;
+            key-positions = <10 22>;
+        };
+
+        cl_apostrophe {
+            bindings = <&kp APOSTROPHE>;
+            key-positions = <21 11>;
+        };
+
+        cl_comma {
+            bindings = <&kp COMMA>;
+            key-positions = <24 12>;
+        };
+
+        cl_tab {
+            bindings = <&kp TAB>;
+            key-positions = <13 12 11>;
+        };
+
+        cl_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <24 23 22>;
+        };
     };
 
     behaviors {
@@ -312,10 +442,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none               &none           &none           &none             &none    &none          &none      &none  &none  &none
-       &mt LEFT_CONTROL C  &mt LEFT_GUI R  &mt LEFT_ALT S  &mt LEFT_SHIFT T  &none    &none          &kp I      &kp N  &kp S  &kp R
-&none  &kp Q               &kp J           &kp V           &kp D             &none    &none          &kp E      &kp T  &kp O  &kp A  &none
-                                           &none           &none             &none    &kp BACKSPACE  &kp SPACE  &none
+       &none  &none  &none  &none      &none            &none          &none      &none  &none  &none
+       &kp R  &kp S  &kp N  &kp I      &none            &none          &kp I      &kp N  &kp S  &kp R
+&none  &kp A  &kp O  &kp T  &kp E      &none            &none          &kp E      &kp T  &kp O  &kp A  &none
+                     &none  &kp SPACE  &kp BACKSPACE    &kp BACKSPACE  &kp SPACE  &none
             >;
         };
 
